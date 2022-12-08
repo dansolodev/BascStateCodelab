@@ -1,6 +1,5 @@
 package mx.com.dcc.basicstatecodelab
 
-import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -16,7 +15,9 @@ import mx.com.dcc.basicstatecodelab.ui.theme.BasicStateCodelabTheme
 fun WaterCounter(modifier: Modifier = Modifier) {
     Column(modifier = modifier.padding(16.dp)) {
         var count by remember { mutableStateOf(0) }
-        Text(text = "You've $count glasses")
+        if (count > 0) {
+            Text(text = "You've $count glasses")
+        }
         Button(onClick = { count++ }, modifier = modifier.padding(top = 8.dp)) {
             Text(text = "Add one")
         }
