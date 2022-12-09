@@ -16,7 +16,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.unit.dp
-import mx.com.dcc.basicstatecodelab.model.WellnessTask
 
 @Composable
 fun WellnessTaskItem(
